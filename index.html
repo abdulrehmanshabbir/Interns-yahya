@@ -1,78 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body class="page-home">
 <title>Interns Resources</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: same system as Python Problems: monochrome, centred header, two outlined resource cards side by side. */
-:root {
-  --bg: #ffffff;
-  --ink: #0a0a0a;
-  --muted: #6e6e6e;
-  --line: #e3e3e3;
-  --soft: #f5f5f5;
-  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0a0a0a; --ink: #f2f2f2; --muted: #8c8c8c; --line: #262626; --soft: #141414;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0a0a0a; --ink: #f2f2f2; --muted: #8c8c8c; --line: #262626; --soft: #141414;
-  color-scheme: dark;
-}
-
-* { box-sizing: border-box; }
-body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
-.wrap {
-  max-width: 960px; margin: 0 auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-
-/* Header */
-.masthead { padding-block: 64px 36px; display: grid; gap: 10px; justify-items: center; text-align: center; }
-h1 { font-weight: 600; font-size: clamp(30px, 5.5vw, 42px); line-height: 1.1; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
-.lede { margin: 0; color: var(--muted); max-width: 46ch; text-wrap: balance; }
-
-/* Two resource cards */
-.cards {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
-  padding-bottom: 64px;
-}
-.card {
-  border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
-  padding: 24px; display: flex; flex-direction: column; gap: 14px; min-width: 0;
-  transition: border-color .15s ease;
-}
-.card:hover, .card:focus-within { border-color: var(--ink); }
-.icon { width: 48px; height: 48px; color: var(--ink); display: block; flex: none; }
-.card h2 { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.3; }
-.card p { margin: 0; color: var(--muted); font-size: 15px; }
-.actions { margin-top: auto; padding-top: 6px; display: flex; justify-content: flex-end; gap: 8px; }
-.btn {
-  font: inherit; font-size: 13.5px; font-weight: 500; border-radius: 4px; padding: 6px 14px;
-  border: 1px solid var(--ink); background: transparent; color: var(--ink); text-decoration: none;
-  display: inline-flex; align-items: center; gap: 6px;
-}
-.btn:hover { background: var(--ink); color: var(--bg); }
-.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-.btn.secondary { border-color: var(--line); }
-.btn.secondary:hover { border-color: var(--ink); }
-.btn.disabled { border-color: var(--line); color: var(--muted); pointer-events: none; }
-
-@media (max-width: 760px) {
-  .cards { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
-}
-@media (max-width: 600px) {
-  .masthead { padding-block: 44px 28px; }
-  .card { padding: 20px; }
-}
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-</style>
+<link rel="stylesheet" href="style.css">
 
 <header class="wrap masthead">
   <h1>Interns Resources</h1>
@@ -94,7 +25,7 @@ h1 { font-weight: 600; font-size: clamp(30px, 5.5vw, 42px); line-height: 1.1; le
       <h2>Daily Report Template</h2>
       <p>The format to fill in and post before ending each working day.</p>
       <div class="actions">
-        <a class="btn" href="dailyreporttemplate/">Open</a>
+        <a class="btn" href="templates/report">Open</a>
       </div>
     </article>
 
@@ -112,7 +43,7 @@ h1 { font-weight: 600; font-size: clamp(30px, 5.5vw, 42px); line-height: 1.1; le
       <h2>Python Outline</h2>
       <p>Every topic to learn, from the fundamentals to professional Python.</p>
       <div class="actions">
-        <a class="btn" href="python-outline/">Open</a>
+        <a class="btn" href="outline/">Open</a>
       </div>
     </article>
 
@@ -130,7 +61,7 @@ h1 { font-weight: 600; font-size: clamp(30px, 5.5vw, 42px); line-height: 1.1; le
       <h2>Python Problems</h2>
       <p>Logic problems from Basic to Advanced, with hints and solutions.</p>
       <div class="actions">
-        <a class="btn" href="problems/">Open</a>
+        <a class="btn" href="problems/main">Open</a>
       </div>
     </article>
 

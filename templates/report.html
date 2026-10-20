@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body class="page-daily">
+<title>Daily Progress Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+
+<header class="wrap masthead">
+  <h1>Daily Progress Report</h1>
+</header>
+
+<main class="wrap">
+
+  <article class="card">
+    <div class="card-head">
+      <p class="card-title">Template</p>
+      <button class="copy" id="copyBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+        <span id="copyLabel">Copy template</span>
+      </button>
+      <span class="sr-only" role="status" id="copyStatus"></span>
+    </div>
+
+    <div class="preview" id="preview">
+      <p class="pv-title"><b>Daily Progress Report <span class="today">--</span></b></p>
+      <p>Working hours today: <span class="placeholder">&lt;e.g. 9:00 AM – 5:00 PM&gt;</span></p>
+      <div class="pv-sec"><p>What I worked on today</p><ul><li><span></span></li></ul></div>
+      <div class="pv-sec"><p>Blockers &amp; challenges</p><ul><li><span></span></li></ul></div>
+      <div class="pv-sec"><p>Plan for tomorrow</p><ul><li><span></span></li></ul></div>
+      <div class="pv-sec"><p>Notes / queries</p><ul><li><span></span></li></ul></div>
+    </div>
+  </article>
+</main>
+
+<script src="app.js"></script>
+
+</body></html>
