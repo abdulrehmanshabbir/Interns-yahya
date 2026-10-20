@@ -2504,7 +2504,6 @@ function renderCard(p) {
   const st = STAGES.find(s => s.key === p.stage);
   const art = document.createElement("article");
   art.className = "prob" + (solved.has(p.id) ? " is-done" : "");
-  art.id = p.id;
   art.style.setProperty("--stage", st.color);
   art.innerHTML = `
     <header class="prob-head">
