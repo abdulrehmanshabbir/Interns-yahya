@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Problems — #interns-yahya</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --text: #1a1d21;
+      --muted: #5b6470;
+      --accent: #4f46e5;
+      --accent-soft: #eef2ff;
+      --border: #e3e6ea;
+      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --surface: #171a21;
+        --text: #e8eaed;
+        --muted: #9aa3af;
+        --accent: #818cf8;
+        --accent-soft: #1e2130;
+        --border: #262a33;
+        --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+    .home-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .92rem;
+      margin-bottom: 20px;
+    }
+    .home-link:hover { color: var(--accent); }
+    header.page-header { margin-bottom: 8px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.6rem);
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .intro { color: var(--muted); font-size: 1.08rem; margin: 0 0 36px; }
+    .cards { display: grid; gap: 16px; }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    a.card:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 650;
+      margin: 0 0 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title .arrow { color: var(--accent); transition: transform .15s ease; }
+    a.card:hover .card-title .arrow { transform: translateX(4px); }
+    .card-desc { color: var(--muted); margin: 0; font-size: .97rem; }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="home-link" href="../">&larr; Home</a>
+    <header class="page-header">
+      <span class="eyebrow">#interns-yahya</span>
+      <h1>Python Problems</h1>
+    </header>
+    <p class="intro">
+      Dated sets of Python practice problems for the interns. Each set is a
+      self-contained worksheet of coding problems to work through. New dated
+      sets will be added here as they are published.
+    </p>
+
+    <div class="cards">
+      <a class="card" href="20-10-2026.html">
+        <p class="card-title">20 Oct 2026 (20-10-2026) <span class="arrow">&rarr;</span></p>
+        <p class="card-desc">The first set of Python practice problems.</p>
+      </a>
+    </div>
+
+    <footer>
+      Maintained for the <strong>#interns-yahya</strong> channel.
+    </footer>
+  </div>
+</body>
+</html>
