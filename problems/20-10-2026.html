@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><script>if('scrollRestoration' in history)history.scrollRestoration='manual';</script><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Python Problems</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2739,6 +2739,20 @@ const initial = (location.hash || "").replace("#", "");
 const byId = P.findIndex(p => p.id === initial);
 if (byId >= 0) show(byId, false);
 else setStage(STAGES.some(s => s.key === initial) ? initial : "basic", false);
+</script>
+
+<script>
+/* Land at the top on every load/reload, regardless of saved scroll or hash.
+   The hash only selects which problem is shown (via data lookup), never scroll,
+   so forcing scroll-to-top does not break deep-linking. */
+(function () {
+  function toTop() { window.scrollTo(0, 0); }
+  toTop();
+  window.addEventListener("load", function () {
+    toTop();
+    requestAnimationFrame(function () { requestAnimationFrame(toTop); });
+  });
+})();
 </script>
 
 </body></html>
