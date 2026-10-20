@@ -1,131 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interns — #interns-yahya</title>
-  <style>
-    :root {
-      --bg: #f6f7f9;
-      --surface: #ffffff;
-      --text: #1a1d21;
-      --muted: #5b6470;
-      --accent: #4f46e5;
-      --accent-soft: #eef2ff;
-      --border: #e3e6ea;
-      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1115;
-        --surface: #171a21;
-        --text: #e8eaed;
-        --muted: #9aa3af;
-        --accent: #818cf8;
-        --accent-soft: #1e2130;
-        --border: #262a33;
-        --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
-      }
-    }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 48px 20px 64px;
-    }
-    header.page-header { margin-bottom: 8px; }
-    .eyebrow {
-      display: inline-block;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-size: clamp(1.9rem, 5vw, 2.6rem);
-      line-height: 1.15;
-      margin: 0 0 12px;
-      letter-spacing: -0.02em;
-    }
-    .intro { color: var(--muted); font-size: 1.08rem; margin: 0 0 36px; }
-    .cards { display: grid; gap: 16px; }
-    a.card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px 24px;
-      box-shadow: var(--shadow);
-      transition: transform .15s ease, border-color .15s ease;
-    }
-    a.card:hover { transform: translateY(-2px); border-color: var(--accent); }
-    .card-title {
-      font-size: 1.2rem;
-      font-weight: 650;
-      margin: 0 0 4px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .card-title .arrow { color: var(--accent); transition: transform .15s ease; }
-    a.card:hover .card-title .arrow { transform: translateX(4px); }
-    .card-desc { color: var(--muted); margin: 0; font-size: .97rem; }
-    footer {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: .88rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header class="page-header">
-      <span class="eyebrow">#interns-yahya</span>
-      <h1>Interns Resource Hub</h1>
-    </header>
-    <p class="intro">
-      Welcome! This is the central resource hub for the interns on the
-      <strong>#interns-yahya</strong> channel. Here you'll find the Python
-      assessment and the daily report template you need during your internship.
-      Pick a resource below to get started.
-    </p>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Interns Resources</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: same system as Python Problems: monochrome, centred header, two outlined resource cards side by side. */
+:root {
+  --bg: #ffffff;
+  --ink: #0a0a0a;
+  --muted: #6e6e6e;
+  --line: #e3e3e3;
+  --soft: #f5f5f5;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0a0a; --ink: #f2f2f2; --muted: #8c8c8c; --line: #262626; --soft: #141414;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a0a0a; --ink: #f2f2f2; --muted: #8c8c8c; --line: #262626; --soft: #141414;
+  color-scheme: dark;
+}
 
-    <div class="cards">
-      <a class="card" href="python-outline/">
-        <p class="card-title">Python Test / Outline <span class="arrow">&rarr;</span></p>
-        <p class="card-desc">A hands-on Python assessment covering fundamentals, output prediction, coding problems, and debugging.</p>
-      </a>
-      <a class="card" href="dailyreporttemplate/">
-        <p class="card-title">Daily Report Template <span class="arrow">&rarr;</span></p>
-        <p class="card-desc">The daily progress report format every intern fills in and posts before ending the working day.</p>
-      </a>
-      <a class="card" href="problems/">
-        <p class="card-title">Python Problems <span class="arrow">&rarr;</span></p>
-        <p class="card-desc">Dated practice problem sets.</p>
-      </a>
-    </div>
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+.wrap {
+  max-width: 960px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
 
-    <footer>
-      Maintained for the <strong>#interns-yahya</strong> channel.
-    </footer>
+/* Header */
+.masthead { padding-block: 64px 36px; display: grid; gap: 10px; justify-items: center; text-align: center; }
+h1 { font-weight: 600; font-size: clamp(30px, 5.5vw, 42px); line-height: 1.1; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 46ch; text-wrap: balance; }
+
+/* Two resource cards */
+.cards {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+  padding-bottom: 64px;
+}
+.card {
+  border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
+  padding: 24px; display: flex; flex-direction: column; gap: 14px; min-width: 0;
+  transition: border-color .15s ease;
+}
+.card:hover, .card:focus-within { border-color: var(--ink); }
+.icon { width: 48px; height: 48px; color: var(--ink); display: block; flex: none; }
+.card h2 { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.3; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.actions { margin-top: auto; padding-top: 6px; display: flex; justify-content: flex-end; gap: 8px; }
+.btn {
+  font: inherit; font-size: 13.5px; font-weight: 500; border-radius: 4px; padding: 6px 14px;
+  border: 1px solid var(--ink); background: transparent; color: var(--ink); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn:hover { background: var(--ink); color: var(--bg); }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.btn.secondary { border-color: var(--line); }
+.btn.secondary:hover { border-color: var(--ink); }
+.btn.disabled { border-color: var(--line); color: var(--muted); pointer-events: none; }
+
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+}
+@media (max-width: 600px) {
+  .masthead { padding-block: 44px 28px; }
+  .card { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="wrap masthead">
+  <h1>Interns Resources</h1>
+  <p class="lede">Everything you need during your internship, in one place.</p>
+</header>
+
+<main class="wrap">
+  <div class="cards">
+
+    <article class="card">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z" fill="currentColor" opacity="0.5"/>
+        <path d="M18.0684 8.87225C18.164 8.77664 18.3296 8.82067 18.374 8.94842C18.5361 9.41554 18.8398 10.0236 19.4082 10.592C19.9766 11.1604 20.5846 11.4641 21.0518 11.6262C21.1795 11.6705 21.2235 11.8362 21.1279 11.9318L17.1699 15.8888C16.8525 16.2062 16.6935 16.3647 16.5186 16.5012C16.3121 16.6622 16.0889 16.8006 15.8525 16.9133C15.6523 17.0087 15.4394 17.08 15.0137 17.2219L12.7676 17.9699C12.558 18.0398 12.3271 17.9855 12.1709 17.8293C12.0147 17.6731 11.9604 17.4422 12.0303 17.2326L12.7783 14.9865C12.9202 14.5608 12.9915 14.3479 13.0869 14.1476C13.1995 13.9113 13.338 13.6881 13.499 13.4816C13.6355 13.3066 13.7939 13.1476 14.1113 12.8303L18.0684 8.87225Z" fill="currentColor"/>
+        <path d="M9.5 16.2502C9.91421 16.2502 10.25 16.586 10.25 17.0002C10.25 17.4144 9.91421 17.7502 9.5 17.7502H8C7.58579 17.7502 7.25 17.4144 7.25 17.0002C7.25 16.586 7.58579 16.2502 8 16.2502H9.5Z" fill="currentColor"/>
+        <path d="M11 12.2502C11.4142 12.2502 11.75 12.586 11.75 13.0002C11.75 13.4144 11.4142 13.7502 11 13.7502H8C7.58579 13.7502 7.25 13.4144 7.25 13.0002C7.25 12.586 7.58579 12.2502 8 12.2502H11Z" fill="currentColor"/>
+        <path d="M19.3076 7.63397C20.1523 6.78933 21.5216 6.78933 22.3662 7.63397C23.2108 8.4786 23.2108 9.84792 22.3662 10.6926L22.2393 10.8195C22.1165 10.9422 21.9452 10.9976 21.7744 10.967C21.6669 10.9477 21.5097 10.9119 21.3223 10.8469C20.9472 10.7167 20.454 10.4718 19.9912 10.009C19.5284 9.54613 19.2834 9.05297 19.1533 8.67791C19.0883 8.49046 19.0525 8.33323 19.0332 8.22576C19.0026 8.05494 19.0579 7.88364 19.1807 7.76092L19.3076 7.63397Z" fill="currentColor"/>
+        <path d="M14.5 8.25018C14.9142 8.25018 15.25 8.58596 15.25 9.00018C15.25 9.41439 14.9142 9.75018 14.5 9.75018H8C7.58579 9.75018 7.25 9.41439 7.25 9.00018C7.25 8.58596 7.58579 8.25018 8 8.25018H14.5Z" fill="currentColor"/>
+      </svg>
+      <h2>Daily Report Template</h2>
+      <p>The format to fill in and post before ending each working day.</p>
+      <div class="actions">
+        <a class="btn" href="dailyreporttemplate/">Open</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <g opacity="0.5">
+          <path d="M21 17.25C21.4142 17.25 21.75 17.5858 21.75 18C21.75 18.4142 21.4142 18.75 21 18.75H13C12.5858 18.75 12.25 18.4142 12.25 18C12.25 17.5858 12.5858 17.25 13 17.25H21Z" fill="currentColor"/>
+          <path d="M21 13.25C21.4142 13.25 21.75 13.5858 21.75 14C21.75 14.4142 21.4142 14.75 21 14.75H13C12.5858 14.75 12.25 14.4142 12.25 14C12.25 13.5858 12.5858 13.25 13 13.25H21Z" fill="currentColor"/>
+          <path d="M21 9.25C21.4142 9.25 21.75 9.58579 21.75 10C21.75 10.4142 21.4142 10.75 21 10.75H13C12.5858 10.75 12.25 10.4142 12.25 10C12.25 9.58579 12.5858 9.25 13 9.25H21Z" fill="currentColor"/>
+          <path d="M21 5.25C21.4142 5.25 21.75 5.58579 21.75 6C21.75 6.41421 21.4142 6.75 21 6.75H13C12.5858 6.75 12.25 6.41421 12.25 6C12.25 5.58579 12.5858 5.25 13 5.25H21Z" fill="currentColor"/>
+        </g>
+        <path d="M6.09873 13.25C7.10731 13.2502 7.81149 14.1235 7.81162 15.0547C7.81162 15.4509 7.73731 15.7784 7.58701 16.0928C7.45233 16.3745 7.25959 16.6345 7.08799 16.8721C7.07578 16.889 7.06249 16.9051 7.04893 16.9209L6.7667 17.25H7.06162C7.47581 17.25 7.81158 17.5858 7.81162 18C7.81162 18.4142 7.47584 18.75 7.06162 18.75H5.13486C4.84201 18.75 4.57558 18.5796 4.45322 18.3135C4.33097 18.0474 4.3749 17.734 4.56553 17.5117L5.88975 15.9678C6.07768 15.7074 6.17202 15.574 6.2335 15.4453C6.28127 15.3453 6.31162 15.241 6.31162 15.0547C6.31156 14.9492 6.27275 14.866 6.22568 14.8145C6.17988 14.7645 6.13432 14.7501 6.09873 14.75C6.06304 14.7501 6.01677 14.7642 5.9708 14.8145C5.92375 14.866 5.88493 14.9492 5.88486 15.0547C5.88486 15.4689 5.54908 15.8047 5.13486 15.8047C4.72071 15.8046 4.38486 15.4689 4.38486 15.0547C4.385 14.1234 5.09005 13.2501 6.09873 13.25Z" fill="currentColor"/>
+        <path d="M6.59873 5.41018C6.82435 5.23299 7.13167 5.20001 7.38975 5.32522C7.64791 5.45074 7.81257 5.71297 7.8126 6.00003V10C7.8126 10.4141 7.47661 10.7498 7.0626 10.75C6.64845 10.75 6.3126 10.4142 6.3126 10V7.54202L5.59775 8.10354C5.272 8.35911 4.80078 8.30225 4.54502 7.97659C4.28945 7.65086 4.34635 7.17963 4.67197 6.92386L6.59873 5.41018Z" fill="currentColor"/>
+      </svg>
+      <h2>Python Outline</h2>
+      <p>Every topic to learn, from the fundamentals to professional Python.</p>
+      <div class="actions">
+        <a class="btn" href="python-outline/">Open</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <g opacity="0.5">
+          <path d="M19.9551 12.7237C21.3183 14.0869 22 14.7691 22 15.6162C21.9997 16.4632 21.3184 17.1455 19.9551 18.5088L18.5088 19.9551C17.1455 21.3184 16.4632 21.9998 15.6162 22C14.7691 22 14.0869 21.3184 12.7236 19.9551L11.1641 18.3955C11.2372 18.3226 11.3159 18.2447 11.4004 18.1602L18.3955 11.1641L19.9551 12.7237Z" fill="currentColor"/>
+          <path d="M8.38379 2.00002C9.23091 2.00002 9.9131 2.68168 11.2764 4.04494L12.835 5.60354L5.83887 12.5987C5.75439 12.6831 5.67641 12.7619 5.60352 12.835L4.04492 11.2764C2.68165 9.91312 2 9.23094 2 8.38381C2.00025 7.53681 2.6816 6.85456 4.04492 5.49123L5.49121 4.04494C6.85454 2.68162 7.53679 2.00028 8.38379 2.00002Z" fill="currentColor"/>
+          <path d="M15.2871 3.15139C16.8227 1.61581 19.3129 1.61594 20.8486 3.15139C22.3843 4.68708 22.3843 7.17721 20.8486 8.71291L19.9619 9.60061C19.9254 9.58852 19.8881 9.57552 19.8506 9.56252C18.9135 9.2374 17.6852 8.62371 16.5312 7.46975C15.3773 6.31578 14.7636 5.08754 14.4385 4.15041C14.4254 4.11282 14.4125 4.07569 14.4004 4.03909L15.2871 3.15139Z" fill="currentColor"/>
+        </g>
+        <path d="M14.4383 4.1499C14.7634 5.08701 15.3771 6.31532 16.531 7.46924C17.685 8.62316 18.9133 9.23689 19.8504 9.56201C19.8875 9.57489 19.9245 9.58714 19.9607 9.59912L11.4002 18.1597C10.823 18.7368 10.5338 19.0258 10.2156 19.2739C9.84035 19.5666 9.43424 19.8172 9.00466 20.022C8.6404 20.1956 8.2535 20.3254 7.47927 20.5835L3.39528 21.9438C3.01428 22.0708 2.5943 21.972 2.31032 21.688C2.02636 21.404 1.92753 20.984 2.05446 20.603L3.41579 16.519C3.6738 15.745 3.80276 15.3579 3.97634 14.9937C4.18107 14.5641 4.43174 14.158 4.72438 13.7827C4.97255 13.4645 5.26155 13.1752 5.83864 12.5981L14.4002 4.03857C14.4123 4.07514 14.4252 4.11235 14.4383 4.1499Z" fill="currentColor"/>
+        <path d="M20.1082 12.8774C20.5239 13.2935 20.8715 13.644 21.1502 13.9565L19.9998 15.1069C19.7069 15.3997 19.2321 15.3997 18.9392 15.1069C18.6464 14.8141 18.6464 14.3393 18.9392 14.0464L20.1082 12.8774Z" fill="currentColor"/>
+        <path d="M9.7654 2.61279C10.0842 2.87146 10.4393 3.21184 10.865 3.63428L9.49977 4.99951C9.20688 5.2924 8.73212 5.2924 8.43923 4.99951C8.14651 4.7066 8.14639 4.2318 8.43923 3.93896L9.7654 2.61279Z" fill="currentColor"/>
+      </svg>
+      <h2>Python Problems</h2>
+      <p>Logic problems from Basic to Advanced, with hints and solutions.</p>
+      <div class="actions">
+        <a class="btn" href="problems/">Open</a>
+      </div>
+    </article>
+
   </div>
-</body>
-</html>
+</main>
+
+</body></html>

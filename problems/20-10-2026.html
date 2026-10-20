@@ -1,4 +1,4 @@
-<!doctype html><html><head><script>if('scrollRestoration' in history)history.scrollRestoration='manual';</script><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body><script>if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
 <title>Python Problems</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2504,6 +2504,7 @@ function renderCard(p) {
   const st = STAGES.find(s => s.key === p.stage);
   const art = document.createElement("article");
   art.className = "prob" + (solved.has(p.id) ? " is-done" : "");
+  art.id = p.id;
   art.style.setProperty("--stage", st.color);
   art.innerHTML = `
     <header class="prob-head">
@@ -2740,19 +2741,5 @@ const byId = P.findIndex(p => p.id === initial);
 if (byId >= 0) show(byId, false);
 else setStage(STAGES.some(s => s.key === initial) ? initial : "basic", false);
 </script>
-
-<script>
-/* Land at the top on every load/reload, regardless of saved scroll or hash.
-   The hash only selects which problem is shown (via data lookup), never scroll,
-   so forcing scroll-to-top does not break deep-linking. */
-(function () {
-  function toTop() { window.scrollTo(0, 0); }
-  toTop();
-  window.addEventListener("load", function () {
-    toTop();
-    requestAnimationFrame(function () { requestAnimationFrame(toTop); });
-  });
-})();
-</script>
-
+<script>(function(){function t(){window.scrollTo(0,0);}t();window.addEventListener('load',function(){t();requestAnimationFrame(function(){requestAnimationFrame(t);});});})();</script>
 </body></html>
