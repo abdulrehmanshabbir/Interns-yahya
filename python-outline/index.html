@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Assessment — Interns</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --text: #1a1d21;
+      --muted: #5b6470;
+      --accent: #4f46e5;
+      --accent-soft: #eef2ff;
+      --border: #e3e6ea;
+      --code-bg: #f3f4f6;
+      --code-text: #1f2328;
+      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --surface: #171a21;
+        --text: #e8eaed;
+        --muted: #9aa3af;
+        --accent: #818cf8;
+        --accent-soft: #1e2130;
+        --border: #262a33;
+        --code-bg: #0b0d11;
+        --code-text: #d7dbe0;
+        --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .home-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .home-link:hover { text-decoration: underline; }
+    .eyebrow {
+      display: inline-block;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      line-height: 1.15;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .intro { color: var(--muted); font-size: 1.05rem; margin: 0 0 8px; }
+    h2 {
+      font-size: 1.2rem;
+      margin: 40px 0 8px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-soft);
+      letter-spacing: -0.01em;
+    }
+    ol.questions { margin: 16px 0 0; padding-left: 0; list-style: none; counter-reset: q; }
+    ol.questions > li {
+      counter-increment: q;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px 18px 56px;
+      margin-bottom: 14px;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+    ol.questions > li::before {
+      content: counter(q);
+      position: absolute;
+      left: 16px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .q-text { margin: 0; font-weight: 500; }
+    ul.options { list-style: none; margin: 12px 0 0; padding: 0; }
+    ul.options li { margin: 6px 0; color: var(--text); }
+    ul.options .opt { font-weight: 700; color: var(--accent); margin-right: 6px; }
+    code {
+      font-family: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: .9em;
+    }
+    pre {
+      background: var(--code-bg);
+      color: var(--code-text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      margin: 14px 0 0;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="home-link" href="../">&larr; Home</a>
+    <span class="eyebrow">#interns-yahya</span>
+    <h1>Python Assessment — Interns</h1>
+    <p class="intro">Answer all questions. For coding problems, write clean, working Python.</p>
+
+    <h2>Section A — Multiple Choice (choose one)</h2>
+    <ol class="questions">
+      <li>
+        <p class="q-text">What is the output of <code>print(type([]))</code>?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> <code>&lt;class 'list'&gt;</code></li>
+          <li><span class="opt">b)</span> <code>&lt;class 'array'&gt;</code></li>
+          <li><span class="opt">c)</span> <code>list</code></li>
+          <li><span class="opt">d)</span> <code>&lt;list&gt;</code></li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">Which of these is immutable?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> list</li>
+          <li><span class="opt">b)</span> dict</li>
+          <li><span class="opt">c)</span> set</li>
+          <li><span class="opt">d)</span> tuple</li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">What does <code>len("hello")</code> return?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> 4</li>
+          <li><span class="opt">b)</span> 5</li>
+          <li><span class="opt">c)</span> 6</li>
+          <li><span class="opt">d)</span> error</li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">Which keyword defines a function?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> func</li>
+          <li><span class="opt">b)</span> def</li>
+          <li><span class="opt">c)</span> function</li>
+          <li><span class="opt">d)</span> define</li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">What is the result of <code>3 // 2</code>?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> 1.5</li>
+          <li><span class="opt">b)</span> 1</li>
+          <li><span class="opt">c)</span> 2</li>
+          <li><span class="opt">d)</span> 1.0</li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">How do you start a single-line comment in Python?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> <code>//</code></li>
+          <li><span class="opt">b)</span> <code>/*</code></li>
+          <li><span class="opt">c)</span> <code>#</code></li>
+          <li><span class="opt">d)</span> <code>--</code></li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">What does <code>range(3)</code> produce?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> 1, 2, 3</li>
+          <li><span class="opt">b)</span> 0, 1, 2</li>
+          <li><span class="opt">c)</span> 0, 1, 2, 3</li>
+          <li><span class="opt">d)</span> 0, 1</li>
+        </ul>
+      </li>
+      <li>
+        <p class="q-text">Which list method adds an item to the end of a list?</p>
+        <ul class="options">
+          <li><span class="opt">a)</span> <code>add()</code></li>
+          <li><span class="opt">b)</span> <code>append()</code></li>
+          <li><span class="opt">c)</span> <code>push()</code></li>
+          <li><span class="opt">d)</span> <code>insert()</code></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Section B — Predict the Output / Short Answer</h2>
+    <ol class="questions" start="9">
+      <li><p class="q-text">What does <code>print(2 ** 3)</code> output?</p></li>
+      <li><p class="q-text">What is the output of <code>print("ab" * 3)</code>?</p></li>
+      <li><p class="q-text">Given <code>d = {'a': 1, 'b': 2}</code>, what does <code>print(list(d.keys()))</code> output?</p></li>
+      <li><p class="q-text">What does <code>bool("")</code> return, and why?</p></li>
+      <li><p class="q-text">Explain the difference between <code>==</code> and <code>is</code>.</p></li>
+      <li><p class="q-text">What is a list comprehension? Write one that produces the squares of the numbers 0 through 4.</p></li>
+    </ol>
+
+    <h2>Section C — Coding Problems (write a function)</h2>
+    <ol class="questions" start="15">
+      <li><p class="q-text">Write a function <code>is_even(n)</code> that returns True if n is even, otherwise False.</p></li>
+      <li><p class="q-text">Write a function <code>reverse_string(s)</code> that returns the string reversed.</p></li>
+      <li><p class="q-text">Write a function <code>count_vowels(s)</code> that returns the number of vowels in s.</p></li>
+      <li><p class="q-text">Write a function <code>fizzbuzz(n)</code> that prints the numbers from 1 to n, but prints "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both.</p></li>
+    </ol>
+
+    <h2>Section D — Debugging (find and fix the bug(s))</h2>
+    <ol class="questions" start="19">
+      <li>
+        <p class="q-text">This function should return the sum of a list of numbers. Fix it:</p>
+<pre><code>def total(nums):
+    s = 0
+    for n in nums
+        s + n
+    return s</code></pre>
+      </li>
+      <li>
+        <p class="q-text">This function should return the larger of two numbers. Fix it:</p>
+<pre><code>def maximum(a, b):
+    if a > b
+        return a
+    return b</code></pre>
+      </li>
+    </ol>
+
+    <footer>
+      Maintained for the <strong>#interns-yahya</strong> channel.
+    </footer>
+  </div>
+</body>
+</html>
